@@ -13,12 +13,33 @@
     font-family: "Ubuntu", sans-serif;
 
 }
+body{
+    margin-bottom: 200px;
+}
 
 .container {
     width: 1180px;
     margin: 0 auto;
-}
 
+}
+.section-title-container{
+    display: flex;
+    justify-content: center;
+}
+.section-title{
+    padding: 50px 0px;
+    font-size: 3em;
+    position: relative;
+}
+.section-title::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 40px;
+    width: 150px;
+    height: 3px;
+    background-color: var(--primary);
+}
 .hero-content a{
     border: 2px solid var(--primary);
     padding: 10px 20px;
@@ -51,16 +72,31 @@
     color: var(--white);
 }
 
+.span-text{
+    color: var(--primary);
+}
+.section-title{
+    color: var(--black);
+
+}
 /* Header Style */
 .header {
-    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0px;
+    z-index: 999;
 }
-
+.sticky{
+    background-color: crimson;
+    transition: all linear 0.4s;
+}
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0px;
+    text-align: center;
 }
 
 .logo {
@@ -73,7 +109,7 @@
 .nav-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
     list-style-type: none;
     font-size: 1.1em;
     font-weight: 600;
@@ -118,7 +154,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh - 100px);
+    height: 100vh;
     position: relative;
 
 }
@@ -151,4 +187,52 @@
     font-size: 1.2em;
     margin: 15px 0px 15px 0;
     padding-bottom: 30px;
+}
+
+
+/* About Section Style */
+.about-container{
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about-image{
+    border-bottom: 10px solid var(--primary); 
+    border-left: 8px solid var(--primary); 
+    border-radius: 5px;
+}
+.about-image img{
+    height: 100%;
+    margin-bottom: -5px;
+    
+}
+.about-title-description{
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.description{
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.social-icons i{
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 10px 12px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border: 1px solid var(--black);
+    color: var(--black);
+    border-radius: 100%;
+    
+}
+.social-icons i:hover{
+    background-color: var(--primary);
+    color: var(--white);
+    transition: all linear .4s;
+    border: 1px solid var(--primary);
 }
